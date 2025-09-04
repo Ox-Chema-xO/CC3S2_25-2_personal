@@ -5,3 +5,5 @@ RCA Medical Device Consulting. (s. f.). *Waterfall Methodology*. https://www.rca
 Hughes, C. (s. f.). *Security Throwing Toil Over the Fence*. Resilient Cyber. https://www.resilientcyber.io/p/security-throwing-toil-over-the-fence
 
 Sharma, R. K. (s. f.). *What is DevOps? Net Solutions’ Knowledge Hub*. Net Solutions. https://www.netsolutions.com/hub/cloud-computing/devops/
+
+Atlassian. (s. f.). *Deployment strategies*. Atlassian. https://www.atlassian.com/agile/software-development/software-deployment

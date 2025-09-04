@@ -73,3 +73,24 @@ Por ejemplo, para sistemas con certificaciones regulatorias estrictas, como disp
 
 **Reducción en tiempo de remediación**: Tiempo promedio desde detección de vulnerabilidad hasta su resolución completa, medido mediante tracking de tickets de seguridad desde creación hasta cierre.
 
+#### 4.5 CI/CD y estrategias de despliegue (sandbox, canary, azul/verde)
+
+![](./imagenes/pipeline_canary.png)
+
+#### Estrategia elegida para microservicio de autenticación
+
+Para el servicio de autenticación se puede utilizar canary deployment dirigiendo inicialmente el 5% del tráfico a la nueva versión y aumentando gradualmente hasta 100% basándose en métricas de éxito. Esta estrategia es ideal para servicios críticos como de autenticación porque permite una validación real.
+
+#### Tabla de riesgos vs mitigaciones
+
+| **Riesgo** | **Mitigación** |
+|------------|----------------|
+| Regresión funcional en autenticación | Validación automatizada de contratos de API y suite de pruebas de integración antes de promover |
+| Costo operativo del doble despliegue | Límite de tiempo de convivencia máximo de 2 horas para versiones canary |
+| Manejo inconsistente de sesiones activas | Implementación de "graceful draining" y compatibilidad backward de esquemas de tokens JWT |
+
+#### Si el KPI técnico se mantiene, pero cae una métrica de producto (conversión), explica por qué **ambos tipos de métricas** deben coexistir en el gate.
+Deben coexistir ya que aunque el KPI técnico se mantenga estable, una caída en la métrica de producto (tasa de conversión de login exitoso) puede indicar problemas de UX, latencia imperceptible para el sistema pero frustrante para usuarios, quienes son los que experimentan el producto completo, no solo la ausencia de errores técnicos.
+
+
+
