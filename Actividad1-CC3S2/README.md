@@ -92,5 +92,66 @@ Para el servicio de autenticación se puede utilizar canary deployment dirigiend
 #### Si el KPI técnico se mantiene, pero cae una métrica de producto (conversión), explica por qué **ambos tipos de métricas** deben coexistir en el gate.
 Deben coexistir ya que aunque el KPI técnico se mantenga estable, una caída en la métrica de producto (tasa de conversión de login exitoso) puede indicar problemas de UX, latencia imperceptible para el sistema pero frustrante para usuarios, quienes son los que experimentan el producto completo, no solo la ausencia de errores técnicos.
 
+#### 4.6 Fundamentos prácticos
 
+#### HTTP - contrato observable
 
+![](./imagenes/http-evidencia.png)
+
+- Método: GET
+- Código de estado: 200 OK
+- Tiempo de respuesta: 456 ms
+- Cabecera de caché: cache-control: public, max-age=60, s-maxage=60
+
+El navegador puede servir desde caché local durante 60 segundos sin consultar servidor lo que reduce requests reales
+para datos frecuentemente consultados, además ETag permite actualizaciones eficientes solo cuando el contenido cambia.
+
+#### DNS - nombres y TTL
+
+![](./imagenes/dns-ttl.png)
+
+- Dominio: github.com
+- Tipo de registro: A (directo a IP)
+- IP destino: 20.205.243.166
+- TTL: 45 segundos
+
+Tenemos un TTL de 45 segundos que permite rollbacks rápidos, máximo 45s para revertir a IP anterior lo cual brinda flexibilidad alta para mantenimientos y migraciones de datacenter.
+
+#### TLS - seguridad en tránsito
+
+![](./imagenes/tls-cert.png)
+
+- CN (Common Name): github.com
+- Emisora: Sectigo ECC Domain Validation Secure Server CA
+- Vigencia: 4 febrero 2025 → 5 febrero 2026
+- Algoritmo: SHA-256 con ECC
+
+En caso el certificado no fuera válido, atacantes pueden obtener credenciales, genera desconfianza a los usuarios.
+
+#### 12-Factor - port binding, configuración, logs
+- Para parametrizar el puerto sin tocar código se debe usar una variable de entorno en lugar de harcodear valores
+- Los logs deben enviarse a stdout/stderr para ser capturados por el orquestador como (Docker, Kubernetes) y agregados centralmente. Escribir logs en archivos locales es problemático porque se pierden al reiniciar contenedores y se dispersan entre instancias múltiples.
+- Credenciales hardcodeadas en el código destruyen la reproducibilidad porque impiden usar la misma base de código en múltiples ambientes, exponen secretos en control de versiones, y requieren redeploy para rotación de passwords. 
+
+#### Checklist de diagnóstico
+
+1. Verificar Contrato HTTP
+2. Validar Resolución DNS  
+3. Examinar Certificado TLS
+4. Inspeccionar Puertos
+5. Correlacionar Logs
+6. Verificar Recursos
+
+#### 4.7 Desafíos de DevOps y mitigaciones
+
+![](./imagenes/desafios_devops.png)
+
+#### Riesgos con sus mitigaciones
+1. **Despliegue roto en producción**: 
+Mitigar con Bluegreen deployment y rollback automático
+
+2. **Pipeline lento bloquea releases**:
+Mitigar con tests paralelos, cache de dependencias y revisión cruzada
+
+3. **Cambio sin validación rompe sistema**:
+Mitigar con despliegues graduales y monitorización automática o canary release
