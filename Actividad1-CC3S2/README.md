@@ -1,8 +1,10 @@
 # Actividad 1
 * Nombre: Diego Delgado
 * Fecha: 3/09/2025
-* Tiempo invertido: 
+* Tiempo invertido: 04:30
 * Entorno: 
+- Editor de texto: Visual Studio Code
+- Sistema Operativo: Windows 11
 
 #### 4.1 DevOps vs Cascada tradicional
 
