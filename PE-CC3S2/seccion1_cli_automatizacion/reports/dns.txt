@@ -1,0 +1,18 @@
+== A ==
+google.com.		248	IN	A	142.251.0.102
+google.com.		248	IN	A	142.251.0.113
+google.com.		248	IN	A	142.251.0.139
+google.com.		248	IN	A	142.251.0.138
+google.com.		248	IN	A	142.251.0.101
+google.com.		248	IN	A	142.251.0.100
+== AAAA ==
+google.com.		282	IN	AAAA	2800:3f0:4003:c08::71
+google.com.		282	IN	AAAA	2800:3f0:4003:c08::66
+google.com.		282	IN	AAAA	2800:3f0:4003:c08::64
+google.com.		282	IN	AAAA	2800:3f0:4003:c08::65
+== MX ==
+google.com.		187	IN	MX	10 smtp.google.com.
+
+Los registros A y AAAA proporcionan direcciones IP para la resolución de nombres, permitiendo la conectividad tanto en IPv4 como en IPv6.
+Un TTL bajo aumenta consultas DNS, permite actualizaciones rápidas, pero puede aumentar la carga en los servidores DNS.
+Un TTL alto reduce la frecuencia de consultas a los servidores DNS, pero los cambios en los registros pueden tardar más en propagarse.

@@ -1,0 +1,21 @@
+== TLS via curl -Iv ==
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host google.com:443 was resolved.
+* IPv6: 2800:3f0:4003:c08::66, 2800:3f0:4003:c08::65, 2800:3f0:4003:c08::71, 2800:3f0:4003:c08::64
+* IPv4: 142.251.0.100, 142.251.0.101, 142.251.0.139, 142.251.0.102, 142.251.0.113, 142.251.0.138
+*   Trying 142.251.0.100:443...
+* Connected to google.com (142.251.0.100) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [15 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [6332 bytes data]
