@@ -1,0 +1,4 @@
+Pregunta guía: ¿Qué cambia si modificas MESSAGE/RELEASE sin reiniciar?
+Respuesta: Nada en la app en ejecución. Las variables de entorno se leen
+al iniciar el proceso (12-Factor: Build/Release/Run). Cambiarlas en tu shell
+no altera el entorno del proceso ya lanzado; debes reiniciar para que apliquen.
