@@ -1,0 +1,3 @@
+12-Factor: Logs como flujo en stdout/stderr.
+La app no escribe a archivos; el entorno (CLI, systemd, Docker, etc.) redirige/recoge.
+Esto simplifica agregación, rotación y envío a herramientas (ELK, Loki).

@@ -1,0 +1,2 @@
+crt=/mnt/c/Users/DIEGO/Desktop/DS/CC3S2_25-2_personal/Actividad2-CC3S2/certs/miapp.local.crt
+key=/mnt/c/Users/DIEGO/Desktop/DS/CC3S2_25-2_personal/Actividad2-CC3S2/certs/miapp.local.key

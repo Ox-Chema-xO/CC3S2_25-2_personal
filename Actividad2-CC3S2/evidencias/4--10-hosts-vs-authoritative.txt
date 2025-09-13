@@ -1,0 +1,4 @@
+Diferencia /etc/hosts vs zona DNS autoritativa:
+- /etc/hosts es un archivo local estático que el resolutor consulta primero; no hay TTL ni delegación.
+- Una zona autoritativa vive en servidores DNS y responde para su dominio con TTLs y delegación.
+- Para laboratorio, /etc/hosts basta porque fuerza la resolución local sin depender de DNS público.

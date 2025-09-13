@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Server: nginx/1.24.0 (Ubuntu)
+Date: Fri, 12 Sep 2025 22:16:14 GMT
+Content-Type: application/json
+Content-Length: 143
+Connection: keep-alive
+Strict-Transport-Security: max-age=31536000
+
