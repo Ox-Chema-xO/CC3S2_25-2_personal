@@ -28,8 +28,11 @@
 
    Config: Separar configuración del código usando variables de entorno
     - Por ejemplo, usar .env files para múltiples ambientes
+      
    Port binding: Servicio se autocontiene y expone puerto
     - Evitar harcodear puertos y usar los definidos en las variable de entorno
+      
    Logs: Tratar logs como flujos de eventos a stdout/stderr
     - Por ejemplo usando console.log() hacia stdout, capturado por orquestador y así evitando escribir logs en archivos locales que se pierden al reiniciar
+      
    Processes: Ejecutar como procesos stateless
