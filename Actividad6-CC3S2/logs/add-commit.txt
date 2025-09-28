@@ -1,0 +1,15 @@
+git add logs/git-version.txt 
+git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   logs/git-version.txt
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	logs/add-commit.txt
+
+
+git commit -m "se agrega readme"
+[main (root-commit) 0dfa016] se agrega readme
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md

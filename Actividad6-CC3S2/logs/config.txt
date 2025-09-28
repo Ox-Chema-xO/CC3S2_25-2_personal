@@ -1,0 +1,14 @@
+git config --list
+user.name=Diego
+user.email=diegoexample@gmail.com
+init.defaultbranch=main
+merge.tool=vscode
+mergetool.vscode.cmd=code --wait 
+alias.co=checkout
+alias.br=branch
+alias.ci=commit
+alias.st=status
+alias.last=log -1 HEAD
+alias.hist=log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+core.autocrlf=input
+push.default=current

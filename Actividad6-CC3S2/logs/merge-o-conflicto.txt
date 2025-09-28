@@ -1,0 +1,15 @@
+git merge feature/new-feature 
+Updating 9187e27..f22faef
+Fast-forward
+ logs/example.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 logs/example.txt
+
+git merge feature/new-feature 
+Auto-merging app.py
+CONFLICT (add/add): Merge conflict in app.py
+Automatic merge failed; fix conflicts and then commit the result.
+
+git commit -m "Resuelve el conflicto de fusión entre la versión main y feature/advanced-feature"
+[main 304c720] Resuelve el conflicto de fusión entre la versión main y feature/advanced-feature
+

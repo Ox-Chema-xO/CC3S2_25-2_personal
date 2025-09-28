@@ -1,0 +1,7 @@
+git branch
+feature/new-feature
+* main
+
+git checkout feature/new-feature
+M	logs/git-version.txt
+Switched to branch 'feature/new-feature'

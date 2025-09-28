@@ -1,0 +1,3 @@
+git log --oneline
+9187e27 (HEAD -> main) se agrega log sobre git-version
+0dfa016 se agrega readme
