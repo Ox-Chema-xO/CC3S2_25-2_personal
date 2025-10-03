@@ -1,0 +1,9 @@
+*   e5eb6ce (HEAD -> main) Merge commit 'd6304be849497953cd4735e6f13c186955196174' as 'vendor/demo'
+|\  
+| * d6304be Squashed 'vendor/demo/' content from commit d66993b
+*   1a5d25d Merge branches 'feat-a' and 'feat-b'
+|\  
+| * af0cd4c (feat-b) Agregar b.txt
+* | 0f5aa09 (feat-a) Agregar a.txt
+|/  
+* b49f4be Commit base en main

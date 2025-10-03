@@ -1,0 +1,23 @@
+* 50b20c9 (HEAD -> main, feature-eol) Modificar archivo con LF
+* d7dfef1 Archivo con CRLF
+*   bb44701 Merge detectando renombre
+|\  
+| * c2ea71c (feature-rename) Renombrar archivo
+* | 45ffe93 Cambio en original.txt
+|/  
+* 123b1d8 Archivo original
+*   689509c Merge usando -X ours
+|\  
+| * 8deee3c (feature-x) Cambio en feature-x
+* | 12a39dd Cambio en main
+|/  
+* cd6f684 Base de conflicto
+*   e5eb6ce Merge commit 'd6304be849497953cd4735e6f13c186955196174' as 'vendor/demo'
+|\  
+| * d6304be Squashed 'vendor/demo/' content from commit d66993b
+*   1a5d25d Merge branches 'feat-a' and 'feat-b'
+|\  
+| * af0cd4c (feat-b) Agregar b.txt
+* | 0f5aa09 (feat-a) Agregar a.txt
+|/  
+* b49f4be Commit base en main
