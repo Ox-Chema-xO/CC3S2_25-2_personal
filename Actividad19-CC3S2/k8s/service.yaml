@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ejemplo-microservice-service
+spec:
+  selector:
+    app: ejemplo-microservice # coincide con las etiquetas del deployment
+  type: NodePort # para acceso desde fuera del clúster local
+  ports:
+    - protocol: TCP
+      port: 80 # puerto del servicio
+      targetPort: 80 # puerto del contenedor
+      nodePort: 30080
